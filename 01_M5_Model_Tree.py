@@ -2,7 +2,7 @@
 """
 Created on Sun Feb 16 15:11:58 2025
 
-@author: cbe001
+@author: Claudia Bertini, Lecturer and Researcher in Hydroinformatics, IHE Delft, Delft, Netherlands
 """
 import numpy as np
 import pandas as pd
