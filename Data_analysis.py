@@ -2,7 +2,7 @@
 """
 Created on Sun Feb 16 14:05:43 2025
 
-@author: cbe001
+@author: Claudia Bertini, Lecturer and Researcher in Hydroinformatics, IHE Delft, Delft, Netherlands
 """
 
 import pandas as pd
@@ -28,10 +28,6 @@ if not os.path.exists(file_path):
     raise FileNotFoundError(f"File not found: {file_path}")
 
 # First load the file with the data from Sieve
-#file = 'Sieve-orig.xlsx'
-#path = r'D:\07_IHE\05_TEACHING\02_WSD\2024-2025\M012-AI for Water Systems\DDM\MT/'
-#df = pd.read_excel(path+file)
-
 df = pd.read_excel(file_path)
 
 '''1) PLOT THE DATA'''
@@ -60,7 +56,6 @@ ax2.invert_yaxis()  # Invert the secondary y-axis
 fig.tight_layout()
 plt.title('Hourly Discharge and Rainfall')
 plt.show()
-#plt.savefig(path+'Rainfall-Discharge_Plot.png', dpi=600, format='png')  
 plot_path = os.path.join(base_path, 'Rainfall-Discharge_Plot.png')
 plt.savefig(plot_path, dpi=600, format='png')
 
@@ -87,8 +82,7 @@ ax.set_ylabel('Correlation coefficient')
 ax.set_ylim(-1,1)
 ax.set_title('Correlation between Discharge and Lagged Rainfall')
 ax.grid(True)
-plt.show()
-#plt.savefig(path+'Rainfall-Discharge_Correlation.png', dpi=600, format='png')  
+plt.show() 
 correlation_plot_path = os.path.join(base_path, 'Rainfall-Discharge_Correlation.png')
 plt.savefig(correlation_plot_path, dpi=600, format='png')
 
@@ -113,6 +107,5 @@ ax.set_xlim(0,13)
 ax.set_title('Discharge Autocorrelation')
 ax.grid(True)
 plt.show()
-#plt.savefig(path+'Discharge_Autocorrelation.png', dpi=600, format='png')  
 autocorr_plot_path = os.path.join(base_path, 'Discharge_Autocorrelation.png')
 plt.savefig(autocorr_plot_path, dpi=600, format='png')
