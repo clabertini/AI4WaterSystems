@@ -29,6 +29,8 @@ if not os.path.exists(file_path):
 
 # First load the file with the data from Sieve
 df = pd.read_excel(file_path)
+# you can print the headers if you want to visualize your data set
+df.head()
 
 '''1) PLOT THE DATA'''
 fig, ax1 = plt.subplots(figsize=(10, 5))
@@ -73,7 +75,8 @@ for lag in range(1, 10):  # 10 steps back
 for lag, corr in correlations.items():
     print(f'Correlation with {lag}: {corr:.3f}')
 
-
+# you can print the headers if you want to visualize your data set now that we changed it
+df.head()
 # Plot correlation over different lags
 fig, ax = plt.subplots(figsize=(8, 4))
 ax.plot(list(correlations.keys()), list(correlations.values()), marker='o', linestyle='-', color='lightseagreen')
