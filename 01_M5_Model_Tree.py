@@ -34,10 +34,6 @@ if not os.path.exists(file_path):
     raise FileNotFoundError(f"File not found: {file_path}")
 
 # First load the file with the data from Sieve
-#file = 'Sieve-orig.xlsx'
-#path = r'D:\07_IHE\05_TEACHING\02_WSD\2024-2025\M012-AI for Water Systems\DDM\MT/'
-#df = pd.read_excel(path+file)
-
 df = pd.read_excel(file_path)
 
 
