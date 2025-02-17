@@ -1,0 +1,5 @@
+name: my_env
+dependencies:
+  - python=3.9  # You can specify your preferred Python version
+  - matplotlib
+  - pandas
